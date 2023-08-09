@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    text-align: center;
+    color: green;
+  }
+</style>
+</head>
+<body>
+<p>Current Date is </p>
+<span id='CurrentDate'></span>
+</body>
+<script>
+const dt = new Date();
+const currentDateElement = document.getElementById('CurrentDate');
+currentDateElement.textContent = `${dt.getDate()} / ${dt.getMonth() + 1} / ${dt.getFullYear()}`;
+</script>
+</html>
