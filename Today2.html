@@ -1,0 +1,22 @@
+<html>
+<head>
+<style>
+body{
+text-align: center;
+.body{
+color: green;
+}
+</style>
+
+</head>
+<body>
+<p>Current Date and Time is </p>
+<span id='Day' class="body" ></span> / <span id='Month' class="body" ></span> / <span id='Year' class="body" ></span>
+</body>
+<script>
+var dt = new Date();
+document.getElementById('Year').innerHTML=dt.getFullYear();
+document.getElementById('Month').innerHTML=dt.getMonth()+ 1;
+document.getElementById('Day').innerHTML=dt.getDate();
+</script>
+</html>
