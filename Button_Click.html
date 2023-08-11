@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html>
+<head>
+</head>
 <body>
-
-
-<button onclick="myFunction()">Click me</button>
-
+<button onclick="currentTime()">Click me</button>
 <p id="time"></p>
-
 <script>
-function myFunction() {
-  document.getElementById("time").innerHTML = new Date();
+function currentTime() {
+  var t = new Date();
+  document.getElementById("time").innerHTML = t;
+}
+
+// Corrected window.onload and event handler assignment
+window.onload = function() {
+  var selItem = sessionStorage.getItem("SelItem");
+  document.getElementById('time').innerHTML = selItem;
+}
+
+// Event handler for p#time is not necessary
+// You can't apply change event to a <p> element
+
+// Storing the current time in sessionStorage
+function storeTime() {
+  var currentTime = new Date().toString();
+  sessionStorage.setItem("SelItem", currentTime);
 }
 </script>
-
 </body>
 </html>
